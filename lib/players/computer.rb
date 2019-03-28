@@ -40,7 +40,7 @@ class Players
       end
       # Preferentially select corners, then middle, then everything else
       unless moved
-        target = PREFFERRED_CELLS.find { |cell| board.valid_move?(cell.to_s) }
+        target = PREFFERRED_CELLS.find { |cell| board.valid_move?((cell).to_s) }
         board.update(target.to_s, self)
       end
       target.to_s
